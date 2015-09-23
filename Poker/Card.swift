@@ -8,8 +8,8 @@
 
 public struct Card {
     
-    let number: Number
-    let suit: Suit
+    public let number: Number
+    public let suit: Suit
 }
 
 extension Card: Emojiable {
