@@ -3,13 +3,13 @@
 import Cocoa
 import Poker
 
-var str = "Hello, playground"
 let deck = Poker.startGame()
 
 
 ;.Jack |*| .Diamonds
 
+;.Ten |*| .Clubs
 
-let cards = [.Ace |*| .Spades, .King |*| .Spades, .Queen |*| .Spades, .Jack |*| .Spades, .Ten |*| .Spades]
+let cards = [.Ace |*| .Spades, .Ace |*| .Hearts, .Ace |*| .Spades, .Ten |*| .Hearts, .Ten |*| .Spades]
 let h = Hand(cards: cards)
 h.valueHand()
