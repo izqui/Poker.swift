@@ -1,4 +1,4 @@
-Poker.swift
+Poker.swift [![Build Status](https://travis-ci.org/izqui/Poker.swift.svg?branch=master)](https://travis-ci.org/izqui/Poker.swift)
 =======
 ![Playground](https://raw.githubusercontent.com/izqui/Poker.swift/master/assets/value.png)
 
