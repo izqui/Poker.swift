@@ -93,6 +93,7 @@ extension Hand: CustomStringConvertible {
     }
 }
 
+// This function is a bit dirty, it could use some refactor
 func detectStraight(numbers: [Number]) -> (Bool, [Number]){
     
     // Beware of the ace. It can be used in A2345 and 10JQKA
