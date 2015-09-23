@@ -46,6 +46,8 @@ extension Number: Emojiable {
     }
 }
 
+extension Number: Comparable {}
+
 public func <(lhs: Number, rhs: Number) -> Bool {
     return lhs.rawValue < rhs.rawValue
 }
