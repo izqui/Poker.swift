@@ -28,13 +28,13 @@ public enum Number: Int {
 }
 
 // Ace different value
-extension Number {
+public extension Number {
 
     var orderValue: Int {
         return self == .Ace ? 0 : self.rawValue
     }
     
-    var straightValues: [Int] {
+    public var straightValues: [Int] {
         return [self.rawValue] + (self == .Ace ? [0] : [])
     }
 }
@@ -44,4 +44,23 @@ extension Number: Emojiable {
         let map = "2⃣️3⃣️4⃣️5⃣️6⃣️7⃣️8⃣️9⃣️🔟🎃👸👑1⃣️"
         return map[self.rawValue-1]
     }
+}
+
+extension Number: Comparable {
+}
+
+public func <(lhs: Number, rhs: Number) -> Bool {
+    return lhs.rawValue < rhs.rawValue
+}
+
+public func <= (lhs: Number, rhs: Number) -> Bool {
+    return lhs.rawValue <= rhs.rawValue
+}
+
+public func >=(lhs: Number, rhs: Number) -> Bool {
+    return lhs.rawValue >= rhs.rawValue
+}
+
+public func >(lhs: Number, rhs: Number) -> Bool {
+    return lhs.rawValue > rhs.rawValue
 }
