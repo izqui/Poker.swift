@@ -8,7 +8,7 @@ You can play with it opening the Playground through `Poker.xcworkspace`
 
 ### Carthage
 ```
-github "izqui/Poker.swift
+github "izqui/Poker.swift"
 ```
 
 ### Cocoa Pods
