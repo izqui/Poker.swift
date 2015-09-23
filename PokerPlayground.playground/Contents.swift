@@ -10,6 +10,6 @@ let deck = Poker.startGame()
 ;.Jack |*| .Diamonds
 
 
-let cards = [.Ace |*| .Hearts, .Three |*| .Spades, .Two |*| .Spades, .Ace |*| .Spades, .Ace |*| .Spades]
+let cards = [.Ace |*| .Spades, .King |*| .Spades, .Queen |*| .Spades, .Jack |*| .Spades, .Ten |*| .Spades]
 let h = Hand(cards: cards)
 h.valueHand()

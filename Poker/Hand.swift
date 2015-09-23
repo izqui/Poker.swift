@@ -87,6 +87,12 @@ public struct Hand {
     }
 }
 
+extension Hand: CustomStringConvertible {
+    public var description: String {
+        return self.cards.reduce("Hand: ") { $0 + $1.description + " " }
+    }
+}
+
 func detectStraight(numbers: [Number]) -> (Bool, [Number]){
     
     // Beware of the ace. It can be used in A2345 and 10JQKA
