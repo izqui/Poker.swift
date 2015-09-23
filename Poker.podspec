@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Poker"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "Swift framework for experimenting with Poker"
   s.description      = <<-DESC
                         Swift framework for experimenting with Poker.
