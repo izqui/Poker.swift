@@ -15,15 +15,16 @@ public struct Hand {
     }
     
     public enum Value: Int {
-        case StraightFlush = 0
-        case FourOfAKind
-        case FullHouse
-        case Flush
-        case Straight
-        case ThreeOfAKind
-        case DoublePair
+
+        case HighCard = 0
         case Pair
-        case HighCard
+        case DoublePair
+        case ThreeOfAKind
+        case Straight
+        case Flush
+        case FullHouse
+        case FourOfAKind
+        case StraightFlush
     }
     
     public struct RealValue: CustomStringConvertible {
@@ -85,6 +86,28 @@ public struct Hand {
         // Last option is just high card
         return RealValue(value: .HighCard, order: numbers.sort { $0.rawValue > $1.rawValue })
     }
+}
+
+public func bestHand(hand1: Hand, _ hand2: Hand) -> Hand {
+    
+    let v1 = hand1.valueHand()
+    let v2 = hand2.valueHand()
+    
+    // Direct value
+    if v1.value.rawValue > v2.value.rawValue { return hand1 }
+    if v2.value.rawValue > v1.value.rawValue { return hand2 }
+    
+    // Compare numbers
+    
+    // We assume the same amount of numbers, since the value is the same, numbers should be the same
+    for (one, two) in zip(v1.order, v2.order) {
+        if one > two { return hand1 }
+        if two > one { return hand2 }
+    }
+    
+    // If we come to the end and it hasn't returned, it means there is a tie. So we can return whatever hand
+    return hand1
+    
 }
 
 extension Hand: CustomStringConvertible {
