@@ -5,17 +5,11 @@ import Poker
 
 let deck = Poker.startGame()
 
+let cards = [.Ace |*| .Spades, .Ace |*| .Hearts, .Ten |*| .Spades, .Five |*| .Hearts, .Ten |*| .Spades]
+Hand(cards: cards).valueHand()
 
-;.Jack |*| .Diamonds
+let t = Table(cards: cards)
+let b1 = t.bestHandWithCards([.Ten |*| .Clubs, .Jack |*| .Diamonds])!
+let b2 = t.bestHandWithCards([.Ace |*| .Clubs, .Ace |*| .Diamonds])!
 
-;.Ten |*| .Clubs
-
-let cards = [.Ace |*| .Spades, .Ace |*| .Hearts, .Two |*| .Spades, .Ten |*| .Hearts, .Ten |*| .Spades]
-let h = Hand(cards: cards)
-h.valueHand()
-
-let cards2 = [.Ace |*| .Spades, .Ace |*| .Clubs, .Jack |*| .Diamonds, .King |*| .Diamonds, .King |*| .Hearts]
-
-//let cards3 = [.Ace |*| .Spades, .Ace |*| .Clubs, .Seven |*| .Diamonds, .Jack |*| .Diamonds, .Jack |*| .Hearts]
-
-bestHand(Hand(cards: cards), Hand(cards: cards2)).valueHand()
+bestHand(b1, b2).valueHand()

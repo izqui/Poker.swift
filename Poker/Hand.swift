@@ -36,7 +36,6 @@ public struct Hand {
     }
     
     public func valueHand() -> RealValue {
-            
         let numbers = self.cards.map { $0.number }
         
         // Shared detections
@@ -86,6 +85,7 @@ public struct Hand {
         // Last option is just high card
         return RealValue(value: .HighCard, order: numbers.sort { $0.rawValue > $1.rawValue })
     }
+
 }
 
 public func bestHand(hand1: Hand, _ hand2: Hand) -> Hand {
@@ -107,13 +107,27 @@ public func bestHand(hand1: Hand, _ hand2: Hand) -> Hand {
     
     // If we come to the end and it hasn't returned, it means there is a tie. So we can return whatever hand
     return hand1
-    
 }
 
 extension Hand: CustomStringConvertible {
     public var description: String {
         return self.cards.reduce("Hand: ") { $0 + $1.description + " " }
     }
+}
+
+extension Hand: Equatable {
+}
+
+public func ==(lhs: Hand, rhs: Hand) -> Bool {
+    let c1 = lhs.cards
+    let c2 = rhs.cards
+    
+    guard c1.count == c2.count else { return false }
+    for i in 0..<c1.count {
+        if c1[i] != c2[i] { return false }
+    }
+    
+    return true
 }
 
 // This function is a bit dirty, it could use some refactor

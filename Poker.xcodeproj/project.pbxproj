@@ -18,6 +18,7 @@
 		E1AE64551BB1DC5E00C648C4 /* stlibext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AE64541BB1DC5E00C648C4 /* stlibext.swift */; settings = {ASSET_TAGS = (); }; };
 		E1AE64571BB1E34900C648C4 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AE64561BB1E34900C648C4 /* Hand.swift */; settings = {ASSET_TAGS = (); }; };
 		E1AE9C901BB31BA80008FB44 /* HandValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AE9C8F1BB31BA80008FB44 /* HandValue.swift */; settings = {ASSET_TAGS = (); }; };
+		E1EBDFC01BC2AC2800B9470A /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EBDFBF1BC2AC2800B9470A /* Table.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		E1AE64541BB1DC5E00C648C4 /* stlibext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stlibext.swift; sourceTree = "<group>"; };
 		E1AE64561BB1E34900C648C4 /* Hand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
 		E1AE9C8F1BB31BA80008FB44 /* HandValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandValue.swift; sourceTree = "<group>"; };
+		E1EBDFBF1BC2AC2800B9470A /* Table.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				E1AE64521BB1D94C00C648C4 /* Number.swift */,
 				E1AE64501BB1D93600C648C4 /* Suit.swift */,
 				E1AE64561BB1E34900C648C4 /* Hand.swift */,
+				E1EBDFBF1BC2AC2800B9470A /* Table.swift */,
 				E1AE644E1BB1D8F100C648C4 /* Emojiable.swift */,
 				E1AE64541BB1DC5E00C648C4 /* stlibext.swift */,
 				E1AE64311BB1BC1F00C648C4 /* Info.plist */,
@@ -221,6 +224,7 @@
 				E1AE64571BB1E34900C648C4 /* Hand.swift in Sources */,
 				E1AE64491BB1C00400C648C4 /* Deck.swift in Sources */,
 				E1AE64511BB1D93600C648C4 /* Suit.swift in Sources */,
+				E1EBDFC01BC2AC2800B9470A /* Table.swift in Sources */,
 				E1AE64531BB1D94C00C648C4 /* Number.swift in Sources */,
 				E1AE644B1BB1C02200C648C4 /* Card.swift in Sources */,
 				E1AE644F1BB1D8F100C648C4 /* Emojiable.swift in Sources */,

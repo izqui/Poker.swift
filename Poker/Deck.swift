@@ -20,7 +20,7 @@ public struct Deck {
     
     func orderedDeck() -> Deck {
         
-        return Deck(cards: self.cards.sort { $0.suit.rawValue == $1.suit.rawValue ? $0.number.orderValue < $1.number.orderValue : $0.suit.rawValue < $1.suit.rawValue })
+        return Deck(cards: self.cards.sortedCards())
     }
     
     func shuffleDeck() -> Deck {
